@@ -8,7 +8,10 @@
 2. Windows VSCode 调试
 3. Linux VSCode 调试
 
+Sysplorer 外部函数官方调试文档：[Windows 版本](https://docs-dev.tongyuan.cc/sysplorerdocs/Help/DevelopingModels/index.html#/Doc/DevelopingModels/AdvancedModels/ModelDebug/WindowsExternalFcnDebug.html )，[Linux 版本](https://docs-dev.tongyuan.cc/sysplorerdocs/Help/DevelopingModels/index.html#/Doc/DevelopingModels/AdvancedModels/ModelDebug/LinuxExternalFcnDebug.html)
+
 ## 开启选项
+
 **外部函数调试功能**开启方法：主页-选项-调试-外部C函数调试-勾选开启外部C函数调试功能，如下图：
 
 ![开启选项](img/1.png)
