@@ -18,6 +18,16 @@ Sysplorer 外部函数官方调试文档：[Windows 版本](https://docs-dev.ton
 
 ![开启选项](img/1.png)
 
+对于 HW 定制版 VSCode 用户，请安装 Sysplorer2025b 1230 之后的版本，并在开启外部C函数调试功能后，在命令窗口输入下面内部命令
+
+``` python
+MwAppOptions.SetKernelBoolOption("MWorks.CCompile.EnableDebugInfoForHW", True)
+```
+
+注意：此内部命令仅需输入一次，会在第一次正常翻译后缓存下来，后面就不用重复输入
+
+![HW](img/HW.png)
+
 ## 生成库文件（仅供参考）
 
 示例中存在静态库、静态库，另外代码可以是 C++ 代码，但头文件必须是**C 接口**， 可参考：[my_div.h](ExternalDebugDemo/Resources/Include/my_div.h)。另外示例中源码形式外部函数必须是 C 代码，可参考 [my_fcn.c](ExternalDebugDemo/Resources/C-Source/my_fcn.c)。
@@ -94,4 +104,4 @@ Linux 平台 Sysplorer 目前仅支持 gcc 编译器，帮助文档已介绍其�
 
 ## 声明
 
-将在 https://github.com/Modelica-ZhipengChen/ExternalDebugDemo 持续更新。
+将在 https://github.com/Modelica-ZhipengChen/ExternalDebugDemo/tree/DebugForHW 持续更新。
