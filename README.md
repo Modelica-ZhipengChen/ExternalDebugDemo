@@ -10,6 +10,8 @@
 
 Sysplorer 外部函数官方调试文档：[Windows 版本](https://docs-dev.tongyuan.cc/sysplorerdocs/Help/DevelopingModels/index.html#/Doc/DevelopingModels/AdvancedModels/ModelDebug/WindowsExternalFcnDebug.html )，[Linux 版本](https://docs-dev.tongyuan.cc/sysplorerdocs/Help/DevelopingModels/index.html#/Doc/DevelopingModels/AdvancedModels/ModelDebug/LinuxExternalFcnDebug.html)
 
+**注意**：请不要将整个文件夹放在包含中文、空格等特殊字符的路径中。
+
 ## 开启选项
 
 **外部函数调试功能**开启方法：主页-选项-调试-外部C函数调试-勾选开启外部C函数调试功能，如下图：
@@ -30,16 +32,7 @@ Sysplorer 外部函数官方调试文档：[Windows 版本](https://docs-dev.ton
 
 请按照 `Resources/debug_build_gcc.bat` 中的注释提示设置 MINGW64 和 MINGW32 的环境变量
 
-![环境变量](img/2.png)
-
 **注意**：这两个环境变量的设置并不是必须的！仅仅是此演示中构建方式需要进行的设置。
-
-也可以使用 Sysplorer 内置 gcc 的路径，如下：
-
-``` bat
-set MINGW32=Sysplorer安装路径/Simulator/mingw32
-set MINGW64=Sysplorer安装路径/Simulator/mingw64
-```
 
 并进入 `ExternalDebugDemo/Resources` 目录，双击运行 `debug_build_gcc.bat` 生成动态库
 
