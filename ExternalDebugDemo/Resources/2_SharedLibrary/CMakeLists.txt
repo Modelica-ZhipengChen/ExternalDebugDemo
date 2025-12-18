@@ -39,4 +39,8 @@ if (CMAKE_C_COMPILER_ID STREQUAL "MSVC")
         "$<IF:$<CONFIG:Debug>,$<TARGET_FILE_DIR:myDiv>/$<TARGET_FILE_BASE_NAME:myDiv>.pdb,Not copying in non-Debug>"
         "$<IF:$<CONFIG:Debug>,${TARGET_COPY_DIR},>"
   )
+else()
+  add_custom_command(TARGET myDiv POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different $<TARGET_FILE_DIR:myDiv>/lib$<TARGET_FILE_BASE_NAME:myDiv>.dll.a ${TARGET_COPY_DIR}lib$<TARGET_FILE_BASE_NAME:myDiv>.a
+  )
 endif()
