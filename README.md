@@ -16,9 +16,11 @@ Sysplorer 外部函数官方调试文档：[Windows 版本](https://docs-dev.ton
 
 ![开启选项](img/1.png)
 
-## 生成库文件
+## 生成库文件（仅供参考）
 
 示例中存在静态库、静态库，另外代码可以是 C++ 代码，但头文件必须是**C 接口**， 可参考：[my_div.h](ExternalDebugDemo/Resources/Include/my_div.h)。另外示例中源码形式外部函数必须是 C 代码，可参考 [my_fcn.c](ExternalDebugDemo/Resources/C-Source/my_fcn.c)。
+
+整个工程都是基于 cmake 构建的，请自行下载 cmake（推荐 [cmake3.21.7](https://github.com/Kitware/CMake/releases/tag/v3.21.7)），并将 cmake 所在路径加入到环境变量 PATH 中。
 
 ### Windows VS 调试
 
@@ -30,7 +32,9 @@ Sysplorer 外部函数官方调试文档：[Windows 版本](https://docs-dev.ton
 
 ![环境变量](img/2.png)
 
-也可以使用 Sysplorer 内置 gcc 的路径
+**注意**：这两个环境变量的设置并不是必须的！仅仅是此演示中构建方式需要进行的设置。
+
+也可以使用 Sysplorer 内置 gcc 的路径，如下：
 
 ``` bat
 set MINGW32=Sysplorer安装路径/Simulator/mingw32
@@ -47,7 +51,7 @@ set MINGW64=Sysplorer安装路径/Simulator/mingw64
 bash debug_build.sh
 ```
 
-### 调试准备工作
+## 调试准备工作
 
 请先开启**外部函数调试功能**，加载模型：拖拽 ExternalDebugDemo 目录下的 `package.mo` 到 Sysplorer 界面即可，点击仿真。
 
@@ -59,7 +63,7 @@ bash debug_build.sh
 
 如果是第一次使用此功能，请务必**点击查看帮助文档**，安装必要的软件等准备工作，点击超链接即可自动跳转到调试界面
 
-### 调试界面
+## 调试界面
 
 ### Windows VS 调试
 
