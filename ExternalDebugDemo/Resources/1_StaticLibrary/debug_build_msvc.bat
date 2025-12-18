@@ -1,6 +1,6 @@
 @echo off
 
-rmdir /S /Q build32 build64 > NUL
+rmdir /S /Q build32 build64 > NUL 2>&1
 
 cmake -B build32 -DCMAKE_BUILD_TYPE=Debug -DARCH_BITS=32 -A Win32
 cmake --build build32
