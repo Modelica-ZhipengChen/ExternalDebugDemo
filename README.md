@@ -16,7 +16,9 @@ Sysplorer 外部函数官方调试文档：[Windows 版本](https://docs-dev.ton
 
 ![开启选项](img/1.png)
 
-## 生成动态库
+## 生成库文件
+
+示例中存在静态库、静态库，另外代码可以是 C++ 代码，但头文件必须是**C 接口**， 可参考：[my_div.h](ExternalDebugDemo/Resources/Include/my_div.h)。另外示例中源码形式外部函数必须是 C 代码，可参考 [my_fcn.c](ExternalDebugDemo/Resources/C-Source/my_fcn.c)。
 
 ### Windows VS 调试
 
