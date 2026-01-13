@@ -1,8 +1,8 @@
 @echo off
 
 rem rem 表示注释掉此行
-rem 若使用内置 gcc，请删掉后续三行的 rem，并设置 Sysplorer_PATH 改为您的 Sysplorer 安装路径
-rem set "Sysplorer_PATH=C:/Program Files/MWORKS/Sysplorer2025b"（路径请使用 `/` 不要使用 `\`)
+rem 若使用内置 gcc，请删掉后续三行的 rem，并设置 Sysplorer_PATH 改为您的 Sysplorer 安装路径（路径请使用 `/` 不要使用 `\`)
+rem set "Sysplorer_PATH=C:/Program Files/MWORKS/Sysplorer2025b"
 rem set "MINGW32=%Sysplorer_PATH%/Simulator/mingw32"
 rem set "MINGW64=%Sysplorer_PATH%/Simulator/mingw64"
 
