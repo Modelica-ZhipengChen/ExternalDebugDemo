@@ -9,6 +9,6 @@ extern "C" {
   MW_API double my_div(double x, double y);
 
 
-  #ifdef __cplusplus
+#ifdef __cplusplus
 }
 #endif

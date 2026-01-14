@@ -30,6 +30,6 @@ extern "C" {
   MW_API double func_f(double x, double y);
 
 
-  #ifdef __cplusplus
+#ifdef __cplusplus
 }
 #endif

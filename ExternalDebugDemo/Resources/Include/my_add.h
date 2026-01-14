@@ -10,6 +10,6 @@ extern "C" {
 
   double my_add_sub2(double x, double y, double* y2);
 
-  #ifdef __cplusplus
+#ifdef __cplusplus
 }
 #endif
