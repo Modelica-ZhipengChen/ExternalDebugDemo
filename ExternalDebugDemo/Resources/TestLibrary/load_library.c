@@ -6,32 +6,32 @@
 #include <string.h>
 #endif
 
-DllHander DllLoad(const char* fullname)
+DllHandler DllLoad(const char* fullname)
 {
 #if defined(_WIN32)
-  DllHander dllHander = LoadLibrary(fullname);
+  DllHandler dllHandler = LoadLibrary(fullname);
 #elif defined(__linux__)
-  DllHander dllHander = dlopen(fullname. RTLD_LAZY);
+  DllHandler dllHandler = dlopen(fullname. RTLD_LAZY);
 #endif
 
-  return dllHander;
+  return dllHandler;
 }
 
-int DllUnload(DllHander dllHandler)
+int DllUnload(DllHandler dllHandler)
 {
 #if defined(_WIN32)
   return FreeLibrary(dllHandler);
 #elif defined(__linux__)
-  return dlclose(dllHander);
+  return dlclose(dllHandler);
 #endif
 }
 
-void* DllFindSymbol(DllHander dllHander, const char* name)
+void* DllFindSymbol(DllHandler dllHandler, const char* name)
 {
 #if defined(_WIN32)
-  return GetProcAddress(dllHander, name);
+  return GetProcAddress(dllHandler, name);
 #elif defined(__linux__)
-  return dlsym(dllHander, name);
+  return dlsym(dllHandler, name);
 #endif
 }
 
